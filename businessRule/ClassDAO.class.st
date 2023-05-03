@@ -5,6 +5,14 @@ Class {
 }
 
 { #category : #'as yet unclassified' }
+ClassDAO >> deleteDAOInName: aDAOList [
+
+	| className |
+	^ aDAOList collect: [ :c | 
+		  className := c name asLowercase copyReplaceAll: 'dao' with: '' ]
+]
+
+{ #category : #'as yet unclassified' }
 ClassDAO >> findDao: aClassList [
 
 	| genericDao |

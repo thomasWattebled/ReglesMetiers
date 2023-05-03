@@ -5,6 +5,17 @@ Class {
 }
 
 { #category : #'as yet unclassified' }
+ClassDTO >> deleteDTOAndGWTInName: aDTOList [
+
+	| className |
+	^ aDTOList collect: [ :c | 
+		  className := c name asLowercase.
+			className := className copyReplaceAll: 'dto' with: ''.
+			className := className copyReplaceAll: 'gwt' with: ''. 
+		 ]
+]
+
+{ #category : #'as yet unclassified' }
 ClassDTO >> findDTO: aClassList [
 
 	| blsp blp |
