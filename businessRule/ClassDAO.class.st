@@ -26,6 +26,12 @@ ClassDAO >> deleteDAOInName: aDAOList [
 ]
 
 { #category : #'as yet unclassified' }
+ClassDAO >> findClassImplementing: method in: aClassList [
+
+^ aClassList select: [ :c | (c methods select: [:m | m name= method]) notEmpty.].
+]
+
+{ #category : #'as yet unclassified' }
 ClassDAO >> findDao: aClassList [
 
 	| genericDao |
