@@ -132,8 +132,8 @@ ClassDAOTest >> testInvokedMethodsIn [
 	methodInvoke := FamixJavaMethod new name: 'methodInvoke'.
 	myDAOClass addMethod: method.
 	FamixJavaInvocation new
-		sender: method ;
-		candidates: { methodInvoke  }.
+		sender: method;
+		candidates: { methodInvoke }.
 	self
 		assertCollection: (runner invokedMethodsIn: myDAOClass)
 		hasSameElements: { methodInvoke }

@@ -19,6 +19,21 @@ ClassDAO >> dao: aListOfDao invokeMethod: method [
 ]
 
 { #category : #'as yet unclassified' }
+ClassDAO >> dao: aListOfDao notInvokeMethod: aMethod or: aAnotherMethod [
+
+	| dict |
+	dict := Dictionary new.
+	aListOfDao collect: [ :class | 
+		| intermediaire |
+		intermediaire := self
+			                 notInvokedMethodsIn: class
+			                 method: aMethod
+			                 or: aAnotherMethod.
+		intermediaire notEmpty ifTrue: [ dict at: class put: intermediaire  ] ].
+	^ dict
+]
+
+{ #category : #'as yet unclassified' }
 ClassDAO >> dao: aListOfDao using: aListClass [
 
 	| result dict |
@@ -58,14 +73,24 @@ ClassDAO >> findDao: aClassList [
 ]
 
 { #category : #'as yet unclassified' }
-ClassDAO >> invokedMethodsIn: Dao [
+ClassDAO >> invokedMethodsIn: aClass [
 
-	^ Dao methods flatCollect: #invokedMethods
+	^ aClass methods flatCollect: #invokedMethods
 ]
 
 { #category : #'as yet unclassified' }
-ClassDAO >> reference: Dao [
+ClassDAO >> notInvokedMethodsIn: aClass method: amethod or: anothermethod [
+
+	^ aClass methods reject: [ :m | 
+		  | intermediaire |
+		  intermediaire := m invokedMethods anySatisfy: [ :n | 
+			                   n name = amethod or: n name = anothermethod ] ]
+]
+
+{ #category : #'as yet unclassified' }
+ClassDAO >> reference: aClass [
+
 	| intermediaire |
-	intermediaire := Dao methods flatCollect: #outgoingReferences.
-	^ intermediaire collect: [ :c |c referredType  ]
+	intermediaire := aClass methods flatCollect: #outgoingReferences.
+	^ intermediaire collect: [ :c | c referredType ]
 ]
