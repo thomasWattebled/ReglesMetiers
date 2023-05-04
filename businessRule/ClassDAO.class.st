@@ -5,6 +5,20 @@ Class {
 }
 
 { #category : #'as yet unclassified' }
+ClassDAO >> dao: aListOfDao invokeMethod: method [
+
+	| result |
+	result := OrderedCollection new.
+	aListOfDao collect: [ :class | 
+		| intermediaire |
+		intermediaire := self invokedMethodsIn: class.
+		intermediaire select: [ :m | m name=method  ].
+		intermediaire notEmpty 
+		ifTrue: [ result add: class ]  ].
+	^result
+]
+
+{ #category : #'as yet unclassified' }
 ClassDAO >> dao: aListOfDao using: aListClass [
 
 	| result dict |
@@ -41,6 +55,12 @@ ClassDAO >> findDao: aClassList [
 
 	^ genericDao flatCollect: [ :c | 
 		  c subInheritances collect: #subclass ]
+]
+
+{ #category : #'as yet unclassified' }
+ClassDAO >> invokedMethodsIn: Dao [
+
+	^ Dao methods flatCollect: #invokedMethods
 ]
 
 { #category : #'as yet unclassified' }

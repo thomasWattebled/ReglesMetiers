@@ -124,10 +124,25 @@ ClassDAOTest >> testFindDAO [
 		hasSameElements: result
 ]
 
+{ #category : #test }
+ClassDAOTest >> testInvokedMethodsIn [
+
+	| method methodInvoke |
+	method := FamixJavaMethod new name: 'method'.
+	methodInvoke := FamixJavaMethod new name: 'methodInvoke'.
+	myDAOClass addMethod: method.
+	FamixJavaInvocation new
+		sender: method ;
+		candidates: { methodInvoke  }.
+	self
+		assertCollection: (runner invokedMethodsIn: myDAOClass)
+		hasSameElements: { methodInvoke }
+]
+
 { #category : #initialization }
 ClassDAOTest >> testReference [
 
-	| method expected |
+	| method |
 	method := FamixJavaMethod new name: 'method'.
 	myDAOClass addMethod: method.
 	method addOutgoingReference: (FamixJavaReference new
