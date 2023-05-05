@@ -55,6 +55,18 @@ ClassDAO >> deleteDAOInName: aDAOList [
 ]
 
 { #category : #'as yet unclassified' }
+ClassDAO >> findAllService: aListOfClass [
+
+	| result |
+	result := OrderedCollection new.
+	aListOfClass collect: [ :c | 
+		| intermediaire |
+		intermediaire := self findService: c.
+		result addAll: intermediaire ].
+	^ result
+]
+
+{ #category : #'as yet unclassified' }
 ClassDAO >> findClassImplementing: method in: aClassList [
 
 ^ aClassList select: [ :c | (c methods select: [:m | m name= method]) notEmpty.].
@@ -70,6 +82,14 @@ ClassDAO >> findDao: aClassList [
 
 	^ genericDao flatCollect: [ :c | 
 		  c subInheritances collect: #subclass ]
+]
+
+{ #category : #'as yet unclassified' }
+ClassDAO >> findService: aClass [
+
+	| interface |
+	interface := aClass interfaceImplementations collect: #interface.
+	^ interface flatCollect: [ :i | i queryAllIncoming atScope: FamixJavaClass ]
 ]
 
 { #category : #'as yet unclassified' }
