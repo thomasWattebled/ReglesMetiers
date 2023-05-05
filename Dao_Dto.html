@@ -254,100 +254,84 @@
 <h2>Dao utilisant directement des DTO</h2>
 <p>Le nombre de Dao qui utilise des Dto est de : 16</p>
 <ul>
-<li>DaoInstallation</li>
+<li>fr::sedit::core::batchs::jobs::dao::impl::DaoJobManager
+<ul>
+<li>fr::sedit::core::batchs::jobs::dao::enums::JobStatusEnum</li>
+</ul></li>
+<li>fr::sedit::omaje::coeur::om::dao::impl::DaoClient
+<ul>
+<li>fr::sedit::omaje::coeur::om::model::dto::ClientDTO</li>
+<li>fr::sedit::omaje::coeur::om::model::enums::EnumTypeClient</li>
+</ul></li>
+<li>fr::sedit::omaje::coeur::om::dao::impl::DaoDataPatch
+<ul>
+<li>fr::sedit::omaje::coeur::om::model::enums::EnumEtatPatch</li>
+<li>fr::sedit::omaje::coeur::om::model::enums::EnumTypeDataPatch</li>
 <li>fr::sedit::omaje::coeur::om::model::dto::InstallationDTO</li>
-</ul>
+<li>fr::sedit::omaje::coeur::om::model::dto::DataPatchDTO</li>
+<li>fr::sedit::omaje::coeur::om::model::dto::ClientDTO</li>
+<li>fr::sedit::omaje::coeur::om::model::dto::SocleDTO</li>
+</ul></li>
+<li>fr::sedit::omaje::coeur::om::dao::impl::DaoDataPatchInstallation
 <ul>
-<li>-</li>
-<li>- DaoEtoile</li>
-<li>- fr::sedit::omaje::coeur::om::model::enums::EnumTypeClient</li>
-<li>- fr::sedit::omaje::coeur::om::model::enums::EnumTypeCoordonnee</li>
-<li>- fr::sedit::omaje::etoile::model::dto::ClientExportDTO</li>
-<li>- fr::sedit::omaje::etoile::model::dto::GlobalStatDTO</li>
-<li>- fr::sedit::omaje::etoile::model::dto::PatchExportDTO</li>
-<li>- fr::sedit::omaje::etoile::model::enums::EnumOmajeEvent</li>
-</ul>
+<li>fr::sedit::omaje::coeur::om::model::dto::DataPatchInstallationDTO</li>
+</ul></li>
+<li>fr::sedit::omaje::coeur::om::dao::impl::DaoDetailInstallationProduit
 <ul>
-<li>-</li>
-<li>- DaoDetailInstallationProduit</li>
-<li>- fr::sedit::omaje::coeur::om::model::dto::DetailInstallationProduitDTO</li>
-</ul>
+<li>fr::sedit::omaje::coeur::om::model::dto::DetailInstallationProduitDTO</li>
+</ul></li>
+<li>fr::sedit::omaje::coeur::om::dao::impl::DaoEntreprise
 <ul>
-<li>-</li>
-<li>- DaoProduit</li>
-<li>- fr::sedit::omaje::coeur::om::model::enums::EnumThemeProduit</li>
-</ul>
+<li>fr::sedit::omaje::coeur::om::model::dto::EntrepriseDTO</li>
+<li>fr::sedit::omaje::coeur::om::model::enums::EnumTypeEntreprise</li>
+</ul></li>
+<li>fr::sedit::omaje::coeur::om::dao::impl::DaoInstallation
 <ul>
-<li>-</li>
-<li>- DaoEntreprise</li>
-<li>- fr::sedit::omaje::coeur::om::model::dto::EntrepriseDTO</li>
-<li>- fr::sedit::omaje::coeur::om::model::enums::EnumTypeEntreprise</li>
-</ul>
+<li>fr::sedit::omaje::coeur::om::model::dto::InstallationDTO</li>
+</ul></li>
+<li>fr::sedit::omaje::coeur::om::dao::impl::DaoPatch
 <ul>
-<li>-</li>
-<li>- DaoJobManager</li>
-<li>- fr::sedit::core::batchs::jobs::dao::enums::JobStatusEnum</li>
-</ul>
+<li>fr::sedit::omaje::coeur::om::model::dto::PatchDTO</li>
+</ul></li>
+<li>fr::sedit::omaje::coeur::om::dao::impl::DaoProduit
 <ul>
-<li>-</li>
-<li>- DaoRole</li>
-<li>- fr::sedit::omaje::coeur::om::model::enums::EnumTypeEntreprise</li>
-</ul>
+<li>fr::sedit::omaje::coeur::om::model::enums::EnumThemeProduit</li>
+</ul></li>
+<li>fr::sedit::omaje::coeur::om::dao::impl::DaoRessource
 <ul>
-<li>-</li>
-<li>- DaoDataPatchInstallation</li>
-<li>- fr::sedit::omaje::coeur::om::model::dto::DataPatchInstallationDTO</li>
-</ul>
+<li>fr::sedit::omaje::coeur::om::model::enums::EnumThemeProduit</li>
+<li>fr::sedit::omaje::coeur::om::model::enums::EnumTypeRessource</li>
+</ul></li>
+<li>fr::sedit::omaje::coeur::om::dao::impl::DaoRole
 <ul>
-<li>-</li>
-<li>- DaoRessource</li>
-<li>- fr::sedit::omaje::coeur::om::model::enums::EnumThemeProduit</li>
-<li>- fr::sedit::omaje::coeur::om::model::enums::EnumTypeRessource</li>
-</ul>
+<li>fr::sedit::omaje::coeur::om::model::enums::EnumTypeEntreprise</li>
+</ul></li>
+<li>fr::sedit::omaje::coeur::om::dao::impl::DaoSeditLicenceModules
 <ul>
-<li>-</li>
-<li>- DaoClient</li>
-<li>- fr::sedit::omaje::coeur::om::model::dto::ClientDTO</li>
-<li>- fr::sedit::omaje::coeur::om::model::enums::EnumTypeClient</li>
-</ul>
+<li>fr::sedit::omaje::coeur::om::model::dto::SeditLicenceModulesClientsAndLicenceDTO</li>
+</ul></li>
+<li>fr::sedit::omaje::coeur::om::dao::impl::DaoSeditSetupInfo
 <ul>
-<li>-</li>
-<li>- DaoSeditLicenceModules</li>
-<li>- fr::sedit::omaje::coeur::om::model::dto::SeditLicenceModulesClientsAndLicenceDTO</li>
-</ul>
+<li>fr::sedit::omaje::coeur::om::model::dto::ClientSeditExportDTO</li>
+</ul></li>
+<li>fr::sedit::omaje::coeur::om::dao::impl::DaoSocle
 <ul>
-<li>-</li>
-<li>- DaoSeditSetupInfo</li>
-<li>- fr::sedit::omaje::coeur::om::model::dto::ClientSeditExportDTO</li>
-</ul>
+<li>fr::sedit::omaje::coeur::om::model::dto::SocleDTO</li>
+</ul></li>
+<li>fr::sedit::omaje::coeur::om::dao::impl::DaoUtilisateur
 <ul>
-<li>-</li>
-<li>- DaoSocle</li>
-<li>- fr::sedit::omaje::coeur::om::model::dto::SocleDTO</li>
-</ul>
+<li>fr::sedit::omaje::coeur::om::model::enums::EnumTypeEntreprise</li>
+<li>fr::sedit::omaje::coeur::om::model::enums::EnumEtatPatch</li>
+</ul></li>
+<li>fr::sedit::omaje::etoile::dao::impl::DaoEtoile
 <ul>
-<li>-</li>
-<li>- DaoPatch</li>
-<li>- fr::sedit::omaje::coeur::om::model::dto::PatchDTO</li>
-</ul>
-<ul>
-<li>-</li>
-<li>- DaoDataPatch</li>
-<li>- fr::sedit::omaje::coeur::om::model::dto::ClientDTO</li>
-<li>- fr::sedit::omaje::coeur::om::model::dto::DataPatchDTO</li>
-<li>- fr::sedit::omaje::coeur::om::model::dto::InstallationDTO</li>
-<li>- fr::sedit::omaje::coeur::om::model::dto::SocleDTO</li>
-<li>- fr::sedit::omaje::coeur::om::model::enums::EnumEtatPatch</li>
-<li>- fr::sedit::omaje::coeur::om::model::enums::EnumTypeDataPatch</li>
-</ul>
-<ul>
-<li>-</li>
-<li>- DaoUtilisateur</li>
-<li>- fr::sedit::omaje::coeur::om::model::enums::EnumEtatPatch</li>
-<li>- fr::sedit::omaje::coeur::om::model::enums::EnumTypeEntreprise</li>
-</ul>
-<ul>
-<li>-</li>
+<li>fr::sedit::omaje::etoile::model::enums::EnumOmajeEvent</li>
+<li>fr::sedit::omaje::etoile::model::dto::PatchExportDTO</li>
+<li>fr::sedit::omaje::coeur::om::model::enums::EnumTypeCoordonnee</li>
+<li>fr::sedit::omaje::etoile::model::dto::ClientExportDTO</li>
+<li>fr::sedit::omaje::etoile::model::dto::GlobalStatDTO</li>
+<li>fr::sedit::omaje::coeur::om::model::enums::EnumTypeClient</li>
+</ul></li>
 </ul>
 <h2>Build Query</h2>
 <p>Nous avions remarqué que nous retrouvions plusieurs fois une méthode  <strong>build Query </strong> dans nos Class Dao alors voici toutes les classes qui ont un buildQuery</p>
@@ -371,106 +355,153 @@
 <li>fr::sedit::core::sm::dao::impl::DaoUtilisateur</li>
 <li>fr::sedit::omaje::coeur::om::dao::impl::DaoAdresse</li>
 </ul>
-<p>Quand on regarde en detail  ces classes ont remarqué que DaoAdresse et DaoGroupeUtilisateurs sont vides. DaoUtilisateur a une seule méthode<br>Override et renvoie null.<br>Regardons maintenant quelle methode n'utilise ni getSession ni buildQuery</p>
+<p>Quand on regarde en detail  ces classes ont remarqué que DaoAdresse et DaoGroupeUtilisateurs sont vides. DaoUtilisateur a une seule méthode<br>Override et renvoie null.<br>Regardons maintenant quelle methode n'utilise ni getSession ni buildQuery.</p>
 <ul>
-<li>DaoUtilisateur</li>
+<li>fr::sedit::core::batchs::jobs::dao::impl::DaoJobManager
+<ul>
+<li>fr::sedit::core::batchs::jobs::dao::impl::DaoJobManager.DaoJobManager()</li>
+<li>fr::sedit::core::batchs::jobs::dao::impl::DaoJobManager.getJobStatus(String)</li>
+<li>fr::sedit::core::batchs::jobs::dao::impl::DaoJobManager.<Initializer>()</li>
+</ul></li>
+<li>fr::sedit::core::historeader::dao::impl::DaoHistoReader
+<ul>
+<li>fr::sedit::core::historeader::dao::impl::DaoHistoReader.find(Class<?>,IDCLASS,Number)</li>
+<li>fr::sedit::core::historeader::dao::impl::DaoHistoReader.setRevisionEntityClassName(String)</li>
+</ul></li>
+<li>fr::sedit::core::install::dao::impl::DaoCheckInstallation
+<ul>
+<li>fr::sedit::core::install::dao::impl::DaoCheckInstallation.addOracleInfos(OracleDataSource,Map<String,String>)</li>
+<li>fr::sedit::core::install::dao::impl::DaoCheckInstallation.<Initializer>()</li>
+<li>fr::sedit::core::install::dao::impl::DaoCheckInstallation.addSessionFactoryStats(Map<String,String>)</li>
+</ul></li>
+<li>fr::sedit::core::sm::dao::impl::DaoUtilisateur
+<ul>
+<li>fr::sedit::core::sm::dao::impl::DaoUtilisateur.loadUserByUsername(String,boolean)</li>
+</ul></li>
+<li>fr::sedit::core::tablelistbulk::dao::impl::DaoTableListMementosManager
+<ul>
+<li>fr::sedit::core::tablelistbulk::dao::impl::DaoTableListMementosManager.DaoTableListMementosManager()</li>
+<li>fr::sedit::core::tablelistbulk::dao::impl::DaoTableListMementosManager.<Initializer>()</li>
+</ul></li>
+<li>fr::sedit::core::tablelistbulk::dao::impl::DaoTableListRepertoryMementosManager
+<ul>
+<li>fr::sedit::core::tablelistbulk::dao::impl::DaoTableListRepertoryMementosManager.DaoTableListRepertoryMementosManager()</li>
+<li>fr::sedit::core::tablelistbulk::dao::impl::DaoTableListRepertoryMementosManager.<Initializer>()</li>
+</ul></li>
+<li>fr::sedit::omaje::coeur::om::dao::impl::DaoDataPatch
+<ul>
+<li>fr::sedit::omaje::coeur::om::dao::impl::DaoDataPatch.<Initializer>()</li>
+<li>fr::sedit::omaje::coeur::om::dao::impl::DaoDataPatch.loadAndCountDatapatchDTO(Map<String,Integer>,Map<String,Object>,long,long,String)</li>
+<li>fr::sedit::omaje::coeur::om::dao::impl::DaoDataPatch.loadAndCountDatapatchDTO(Map<String,Integer>,Map<String,Object>,String)</li>
+</ul></li>
+<li>fr::sedit::omaje::coeur::om::dao::impl::DaoRessource
+<ul>
+<li>fr::sedit::omaje::coeur::om::dao::impl::DaoRessource.<Initializer>()</li>
+</ul></li>
+<li>fr::sedit::omaje::coeur::om::dao::impl::DaoRole
+<ul>
+<li>fr::sedit::omaje::coeur::om::dao::impl::DaoRole.<Initializer>()</li>
+</ul></li>
+<li>fr::sedit::omaje::coeur::om::dao::impl::DaoSeditLicenceModules
+<ul>
+<li>fr::sedit::omaje::coeur::om::dao::impl::DaoSeditLicenceModules.sortFromFilterSeditLicenceModulesClientsAndLicences(Map<String,Integer>)</li>
+</ul></li>
+<li>fr::sedit::omaje::coeur::om::dao::impl::DaoSeditSetupInfo
+<ul>
+<li>fr::sedit::omaje::coeur::om::dao::impl::DaoSeditSetupInfo.sortFromFilterSeditExportDTO(Map<String,Integer>)</li>
+</ul></li>
+<li>fr::sedit::omaje::coeur::om::dao::impl::DaoSocle
+<ul>
+<li>fr::sedit::omaje::coeur::om::dao::impl::DaoSocle.loadSocleWithDataPatchInstallationList(Client,String)</li>
+<li>fr::sedit::omaje::coeur::om::dao::impl::DaoSocle.loadSocleOnly(Client,String)</li>
+<li>fr::sedit::omaje::coeur::om::dao::impl::DaoSocle.loadSocleWithPcList(Client,String)</li>
+<li>fr::sedit::omaje::coeur::om::dao::impl::DaoSocle.loadCompleteSocleByClientAndNumero(Client,String)</li>
+<li>fr::sedit::omaje::coeur::om::dao::impl::DaoSocle.loadSocleWithInstallationList(Client,String)</li>
+<li>fr::sedit::omaje::coeur::om::dao::impl::DaoSocle.loadSocleWithDerniereVersionProduitList(Client,String)</li>
+<li>fr::sedit::omaje::coeur::om::dao::impl::DaoSocle.loadSocleWithVersionProduitList(Client,String)</li>
+</ul></li>
+<li>fr::sedit::omaje::coeur::om::dao::impl::DaoUtilisateur
+<ul>
 <li>fr::sedit::omaje::coeur::om::dao::impl::DaoUtilisateur.findCurrentUser()</li>
-</ul>
+</ul></li>
+<li>fr::sedit::omaje::etoile::dao::impl::DaoEtoile
 <ul>
-<li>-</li>
-<li>- DaoEtoile</li>
-<li>- fr::sedit::omaje::etoile::dao::impl::DaoEtoile.<Initializer>()</li>
-<li>- fr::sedit::omaje::etoile::dao::impl::DaoEtoile.buildBaseHqlClientExportDTO(ParamExportClient)</li>
-<li>- fr::sedit::omaje::etoile::dao::impl::DaoEtoile.buildCountHqlClientExportDTO(ParamExportClient)</li>
-<li>- fr::sedit::omaje::etoile::dao::impl::DaoEtoile.cleanStarDuplicates(List<Etoile>,Etoile)</li>
-<li>- fr::sedit::omaje::etoile::dao::impl::DaoEtoile.getCopyStatProcStockDTO_ClientExportDTO(StatProcStockDTO)</li>
-<li>- fr::sedit::omaje::etoile::dao::impl::DaoEtoile.getListeCodeProduitEligibleVirtu()</li>
-<li>- fr::sedit::omaje::etoile::dao::impl::DaoEtoile.loadAndCountClientExportDTO(Map<String,Integer>,Map<String,Object>,String)</li>
-<li>- fr::sedit::omaje::etoile::dao::impl::DaoEtoile.loadAndCountClientExportDTO(Map<String,Integer>,Map<String,Object>,long,long,String)</li>
-<li>- fr::sedit::omaje::etoile::dao::impl::DaoEtoile.loadAndCountPatchExportDTO(Map<String,Integer>,Map<String,Object>,String)</li>
-<li>- fr::sedit::omaje::etoile::dao::impl::DaoEtoile.loadAndCountPatchExportDTO(Map<String,Integer>,Map<String,Object>,long,long,String)</li>
-<li>- fr::sedit::omaje::etoile::dao::impl::DaoEtoile.loadStatsMesDiffuses(Integer,Integer)</li>
-<li>- fr::sedit::omaje::etoile::dao::impl::DaoEtoile.loadStatsMesParc(Integer,Integer)</li>
-<li>- fr::sedit::omaje::etoile::dao::impl::DaoEtoile.sortClientExportDtoByEmails(List<ClientExportDTO>,Integer)</li>
-<li>- fr::sedit::omaje::etoile::dao::impl::DaoEtoile.sortPatchExportDtoByNbDif(List<PatchExportDTO>,Integer)</li>
-<li>- fr::sedit::omaje::etoile::dao::impl::DaoEtoile.sortPatchExportDtoByNbMes(List<PatchExportDTO>,Integer)</li>
-<li>- fr::sedit::omaje::etoile::dao::impl::DaoEtoile.sortPatchExportDtoByNbTel(List<PatchExportDTO>,Integer)</li>
+<li>fr::sedit::omaje::etoile::dao::impl::DaoEtoile.getListeCodeProduitEligibleVirtu()</li>
+<li>fr::sedit::omaje::etoile::dao::impl::DaoEtoile.getCopyStatProcStockDTO_ClientExportDTO(StatProcStockDTO)</li>
+<li>fr::sedit::omaje::etoile::dao::impl::DaoEtoile.loadAndCountPatchExportDTO(Map<String,Integer>,Map<String,Object>,String)</li>
+<li>fr::sedit::omaje::etoile::dao::impl::DaoEtoile.sortPatchExportDtoByNbTel(List<PatchExportDTO>,Integer)</li>
+<li>fr::sedit::omaje::etoile::dao::impl::DaoEtoile.sortPatchExportDtoByNbMes(List<PatchExportDTO>,Integer)</li>
+<li>fr::sedit::omaje::etoile::dao::impl::DaoEtoile.buildCountHqlClientExportDTO(ParamExportClient)</li>
+<li>fr::sedit::omaje::etoile::dao::impl::DaoEtoile.sortPatchExportDtoByNbDif(List<PatchExportDTO>,Integer)</li>
+<li>fr::sedit::omaje::etoile::dao::impl::DaoEtoile.loadAndCountPatchExportDTO(Map<String,Integer>,Map<String,Object>,long,long,String)</li>
+<li>fr::sedit::omaje::etoile::dao::impl::DaoEtoile.<Initializer>()</li>
+<li>fr::sedit::omaje::etoile::dao::impl::DaoEtoile.cleanStarDuplicates(List<Etoile>,Etoile)</li>
+<li>fr::sedit::omaje::etoile::dao::impl::DaoEtoile.loadAndCountClientExportDTO(Map<String,Integer>,Map<String,Object>,long,long,String)</li>
+<li>fr::sedit::omaje::etoile::dao::impl::DaoEtoile.buildBaseHqlClientExportDTO(ParamExportClient)</li>
+<li>fr::sedit::omaje::etoile::dao::impl::DaoEtoile.sortClientExportDtoByEmails(List<ClientExportDTO>,Integer)</li>
+<li>fr::sedit::omaje::etoile::dao::impl::DaoEtoile.loadAndCountClientExportDTO(Map<String,Integer>,Map<String,Object>,String)</li>
+<li>fr::sedit::omaje::etoile::dao::impl::DaoEtoile.loadStatsMesParc(Integer,Integer)</li>
+<li>fr::sedit::omaje::etoile::dao::impl::DaoEtoile.loadStatsMesDiffuses(Integer,Integer)</li>
+</ul></li>
 </ul>
+<h2>Les appels des Dao.</h2>
+<p>Les Dao ne sont pas appelés directement dans d'autre classes. En effet chaque Dao implémente sa propre interface (exemple DaoClient implémente IDaoClient). Ce sont les interfaces qui sont ensuite appelés dans les autres classes.<br>Les Dao sont des attributs dans les services.<br>Les dao sont utilisés dans les classes Service... mais non les DTO.</p>
+<p>Regardons alors où sont utilisés les Services...</p>
+<p>Voici un Exemple dans quelle classe est utilisé e ServiceClient</p>
+<h2>Service</h2>
+<p>le nombre total de Service est de :53- fr::sedit::core::application::services::impl::ServiceApplicationData</p>
 <ul>
-<li>-</li>
-<li>- DaoTableListMementosManager</li>
-<li>- fr::sedit::core::tablelistbulk::dao::impl::DaoTableListMementosManager.<Initializer>()</li>
-<li>- fr::sedit::core::tablelistbulk::dao::impl::DaoTableListMementosManager.DaoTableListMementosManager()</li>
+<li>fr::sedit::core::batchs::impl::strategies::JobManager</li>
+<li>fr::sedit::core::batchs::services::impl::ServiceBatchManager</li>
+<li>fr::sedit::core::busapplicatif::services::impl::ServiceBusApplicatifCore</li>
+<li>fr::sedit::core::busapplicatif::utils::BusApplicatifGedUtils</li>
+<li>fr::sedit::core::documents::services::impl::ServiceWhitePath</li>
+<li>fr::sedit::core::historeader::services::impl::ServiceHistoReader</li>
+<li>fr::sedit::core::install::services::impl::ServiceConfig</li>
+<li>fr::sedit::core::security::services::impl::ServiceIdentificationDefault</li>
+<li>fr::sedit::core::security::services::impl::ServicePhaseDefault</li>
+<li>fr::sedit::core::tablelistbulk::dao::impl::DaoTableListMementosManagerTest</li>
+<li>fr::sedit::core::tablelistbulk::dao::impl::DaoTableListRepertoryMementosManagerTest</li>
+<li>fr::sedit::core::tablelistbulk::services::impl::ServiceTableListMementosManager</li>
+<li>fr::sedit::core::typedocument::services::impl::AbstractServiceTypeDocument</li>
+<li>fr::sedit::core::workflow::services::impl::ServiceWorkflow</li>
+<li>fr::sedit::omaje::coeur::om::services::impl::ServiceActivite</li>
+<li>fr::sedit::omaje::coeur::om::services::impl::ServiceClient</li>
+<li>fr::sedit::omaje::coeur::om::services::impl::ServiceClientSedit</li>
+<li>fr::sedit::omaje::coeur::om::services::impl::ServiceDataPatch</li>
+<li>fr::sedit::omaje::coeur::om::services::impl::ServiceDataPatchInstallation</li>
+<li>fr::sedit::omaje::coeur::om::services::impl::ServiceDetailInstallation</li>
+<li>fr::sedit::omaje::coeur::om::services::impl::ServiceEntreprise</li>
+<li>fr::sedit::omaje::coeur::om::services::impl::ServiceInstallation</li>
+<li>fr::sedit::omaje::coeur::om::services::impl::ServicePatch</li>
+<li>fr::sedit::omaje::coeur::om::services::impl::ServicePc</li>
+<li>fr::sedit::omaje::coeur::om::services::impl::ServiceProduit</li>
+<li>fr::sedit::omaje::coeur::om::services::impl::ServiceRessource</li>
+<li>fr::sedit::omaje::coeur::om::services::impl::ServiceSeditAppParams</li>
+<li>fr::sedit::omaje::coeur::om::services::impl::ServiceSeditApplication</li>
+<li>fr::sedit::omaje::coeur::om::services::impl::ServiceSeditBddInstance</li>
+<li>fr::sedit::omaje::coeur::om::services::impl::ServiceSeditBddUser</li>
+<li>fr::sedit::omaje::coeur::om::services::impl::ServiceSeditComputer</li>
+<li>fr::sedit::omaje::coeur::om::services::impl::ServiceSeditConnecteurBus</li>
+<li>fr::sedit::omaje::coeur::om::services::impl::ServiceSeditEnvironnement</li>
+<li>fr::sedit::omaje::coeur::om::services::impl::ServiceSeditInventaireInfo</li>
+<li>fr::sedit::omaje::coeur::om::services::impl::ServiceSeditLicence</li>
+<li>fr::sedit::omaje::coeur::om::services::impl::ServiceSeditLicenceClients</li>
+<li>fr::sedit::omaje::coeur::om::services::impl::ServiceSeditLicenceModules</li>
+<li>fr::sedit::omaje::coeur::om::services::impl::ServiceSeditLicenceProduits</li>
+<li>fr::sedit::omaje::coeur::om::services::impl::ServiceSeditModule</li>
+<li>fr::sedit::omaje::coeur::om::services::impl::ServiceSeditOracleTablespace</li>
+<li>fr::sedit::omaje::coeur::om::services::impl::ServiceSeditSetupInfo</li>
+<li>fr::sedit::omaje::coeur::om::services::impl::ServiceSeditSetupVersion</li>
+<li>fr::sedit::omaje::coeur::om::services::impl::ServiceSeditSoftParams</li>
+<li>fr::sedit::omaje::coeur::om::services::impl::ServiceSeditTechSoft</li>
+<li>fr::sedit::omaje::coeur::om::services::impl::ServiceSocle</li>
+<li>fr::sedit::omaje::coeur::om::services::impl::ServiceUtilisateur</li>
+<li>fr::sedit::omaje::coeur::om::services::impl::ServiceVagueDiffusion</li>
+<li>fr::sedit::omaje::coeur::om::services::impl::ServiceVersionProduit</li>
+<li>fr::sedit::omaje::common::security::services::impl::ServiceContext</li>
+<li>fr::sedit::omaje::common::security::services::impl::ServiceIdentification</li>
+<li>fr::sedit::omaje::common::security::services::impl::ServicePhase</li>
+<li>fr::sedit::omaje::etoile::services::impl::ServiceEtoile</li>
 </ul>
-<ul>
-<li>-</li>
-<li>- DaoJobManager</li>
-<li>- fr::sedit::core::batchs::jobs::dao::impl::DaoJobManager.<Initializer>()</li>
-<li>- fr::sedit::core::batchs::jobs::dao::impl::DaoJobManager.DaoJobManager()</li>
-<li>- fr::sedit::core::batchs::jobs::dao::impl::DaoJobManager.getJobStatus(String)</li>
-</ul>
-<ul>
-<li>-</li>
-<li>- DaoRole</li>
-<li>- fr::sedit::omaje::coeur::om::dao::impl::DaoRole.<Initializer>()</li>
-</ul>
-<ul>
-<li>-</li>
-<li>- DaoCheckInstallation</li>
-<li>- fr::sedit::core::install::dao::impl::DaoCheckInstallation.<Initializer>()</li>
-<li>- fr::sedit::core::install::dao::impl::DaoCheckInstallation.addOracleInfos(OracleDataSource,Map<String,String>)</li>
-<li>- fr::sedit::core::install::dao::impl::DaoCheckInstallation.addSessionFactoryStats(Map<String,String>)</li>
-</ul>
-<ul>
-<li>-</li>
-<li>- DaoRessource</li>
-<li>- fr::sedit::omaje::coeur::om::dao::impl::DaoRessource.<Initializer>()</li>
-</ul>
-<ul>
-<li>-</li>
-<li>- DaoHistoReader</li>
-<li>- fr::sedit::core::historeader::dao::impl::DaoHistoReader.find(Class<?>,IDCLASS,Number)</li>
-<li>- fr::sedit::core::historeader::dao::impl::DaoHistoReader.setRevisionEntityClassName(String)</li>
-</ul>
-<ul>
-<li>-</li>
-<li>- DaoDataPatch</li>
-<li>- fr::sedit::omaje::coeur::om::dao::impl::DaoDataPatch.<Initializer>()</li>
-<li>- fr::sedit::omaje::coeur::om::dao::impl::DaoDataPatch.loadAndCountDatapatchDTO(Map<String,Integer>,Map<String,Object>,String)</li>
-<li>- fr::sedit::omaje::coeur::om::dao::impl::DaoDataPatch.loadAndCountDatapatchDTO(Map<String,Integer>,Map<String,Object>,long,long,String)</li>
-</ul>
-<ul>
-<li>-</li>
-<li>- DaoSeditLicenceModules</li>
-<li>- fr::sedit::omaje::coeur::om::dao::impl::DaoSeditLicenceModules.sortFromFilterSeditLicenceModulesClientsAndLicences(Map<String,Integer>)</li>
-</ul>
-<ul>
-<li>-</li>
-<li>- DaoSeditSetupInfo</li>
-<li>- fr::sedit::omaje::coeur::om::dao::impl::DaoSeditSetupInfo.sortFromFilterSeditExportDTO(Map<String,Integer>)</li>
-</ul>
-<ul>
-<li>-</li>
-<li>- DaoTableListRepertoryMementosManager</li>
-<li>- fr::sedit::core::tablelistbulk::dao::impl::DaoTableListRepertoryMementosManager.<Initializer>()</li>
-<li>- fr::sedit::core::tablelistbulk::dao::impl::DaoTableListRepertoryMementosManager.DaoTableListRepertoryMementosManager()</li>
-</ul>
-<ul>
-<li>-</li>
-<li>- DaoSocle</li>
-<li>- fr::sedit::omaje::coeur::om::dao::impl::DaoSocle.loadCompleteSocleByClientAndNumero(Client,String)</li>
-<li>- fr::sedit::omaje::coeur::om::dao::impl::DaoSocle.loadSocleOnly(Client,String)</li>
-<li>- fr::sedit::omaje::coeur::om::dao::impl::DaoSocle.loadSocleWithDataPatchInstallationList(Client,String)</li>
-<li>- fr::sedit::omaje::coeur::om::dao::impl::DaoSocle.loadSocleWithDerniereVersionProduitList(Client,String)</li>
-<li>- fr::sedit::omaje::coeur::om::dao::impl::DaoSocle.loadSocleWithInstallationList(Client,String)</li>
-<li>- fr::sedit::omaje::coeur::om::dao::impl::DaoSocle.loadSocleWithPcList(Client,String)</li>
-<li>- fr::sedit::omaje::coeur::om::dao::impl::DaoSocle.loadSocleWithVersionProduitList(Client,String)</li>
-</ul>
-<ul>
-<li>-</li>
-<li>- DaoUtilisateur</li>
-<li>- fr::sedit::core::sm::dao::impl::DaoUtilisateur.loadUserByUsername(String,boolean)</li>
-</ul>
-<ul>
-<li>-</li>
-</ul>
+<p>service := Service new.<br>myService := service findIN: mooseModel service: 'ServiceClient'.<br>printer printMooseName: (service getTypeEntitiesOFIService: myService) asArray</p>
