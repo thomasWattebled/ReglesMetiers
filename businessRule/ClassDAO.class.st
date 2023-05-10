@@ -89,7 +89,9 @@ ClassDAO >> findService: aClass [
 
 	| interface |
 	interface := aClass interfaceImplementations collect: #interface.
-	^ interface flatCollect: [ :i | i queryAllIncoming atScope: FamixJavaClass ]
+	^ (interface flatCollect: [ :i | 
+		   i typedEntities flatCollect: [ :c | c atScope: FamixJavaClass ] ])
+		  asSet
 ]
 
 { #category : #'as yet unclassified' }
