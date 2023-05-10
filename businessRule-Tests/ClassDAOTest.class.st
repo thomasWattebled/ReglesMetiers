@@ -5,16 +5,13 @@ Class {
 		'listClass',
 		'model',
 		'runner',
-		'GenericDAO',
-		'NotDAO',
 		'noDAO',
 		'myDAOClass',
-		'genericDao',
+		'mySecondDAOClass',
 		'genericDaoPClass',
-		'genericDaoPType',
+		'genericDao',
 		'genericDaoPType1',
-		'genericDaoPType2',
-		'mySecondDAOClass'
+		'genericDaoPType2'
 	],
 	#category : #'businessRule-Tests'
 }
@@ -65,6 +62,37 @@ ClassDAOTest >> setUp [
 	model add: noDAO.
 
 	listClass := model allModelClasses
+]
+
+{ #category : #test }
+ClassDAOTest >> testDaoNotInvokeMethodOr [
+
+	| firstmethod secondMethod thirdMethod dict expected |
+	dict := Dictionary new.
+	firstmethod := self newEntity: FamixJavaMethod named: 'firstmethod'.
+	secondMethod := self newEntity: FamixJavaMethod named: 'secondMethod'.
+	thirdMethod := self newEntity: FamixJavaMethod named: 'thirdMethod'.
+	myDAOClass addMethod: firstmethod.
+	noDAO addMethod: thirdMethod.
+	FamixJavaInvocation new
+		sender: firstmethod;
+		candidates: { secondMethod }.
+	dict := runner
+		        dao: listClass
+		        notInvokeMethod: 'firstmethod'
+		        or: 'secondMethod'.
+
+	self assertCollection: dict keys hasSameElements: { noDAO }.
+
+	myDAOClass addMethod: thirdMethod.
+	expected := OrderedCollection new.
+	expected add: myDAOClass.
+	expected add: noDAO.
+	dict := runner
+		        dao: listClass
+		        notInvokeMethod: 'firstmethod'
+		        or: 'secondMethod'.
+	self assertCollection: dict keys hasSameElements: { myDAOClass }.
 ]
 
 { #category : #test }
@@ -125,6 +153,23 @@ ClassDAOTest >> testFindDAO [
 ]
 
 { #category : #test }
+ClassDAOTest >> testFindService [
+
+	| service iDao |
+	service := self newEntity: FamixJavaClass named: 'ServiceDao'.
+	iDao := self newEntity: FamixJavaInterface named: 'ImyDAOClass'.
+	myDAOClass addInterfaceImplementation: (FamixJavaImplementation new
+					 interface: iDao;
+					implementingClass: myDAOClass).
+	service  addAttribute: ((FamixJavaAttribute named:'daoClient')
+		 		parentType: service    ;
+		       declaredType: iDao).
+		
+	self assertCollection: (runner findService:  myDAOClass)
+		hasSameElements: { service }
+]
+
+{ #category : #test }
 ClassDAOTest >> testInvokedMethodsIn [
 
 	| method methodInvoke |
@@ -137,6 +182,23 @@ ClassDAOTest >> testInvokedMethodsIn [
 	self
 		assertCollection: (runner invokedMethodsIn: myDAOClass)
 		hasSameElements: { methodInvoke }
+]
+
+{ #category : #test }
+ClassDAOTest >> testNotInvokedMethodsInMethodOr [
+
+	| firstmethod secondMethod thirdMethod |
+	firstmethod := self newEntity: FamixJavaMethod named: 'firstmethod'.
+	secondMethod := self newEntity: FamixJavaMethod named: 'secondMethod'.
+	thirdMethod := self newEntity: FamixJavaMethod named: 'thirdMethod'.
+		myDAOClass addMethod: firstmethod .
+		myDAOClass addMethod: thirdMethod .
+	FamixJavaInvocation new
+		sender: firstmethod;
+		candidates: { secondMethod }.
+	self
+		assertCollection: (runner notInvokedMethodsIn: myDAOClass  method:'firstmethod'  or:'secondMethod' )
+		hasSameElements: { thirdMethod }
 ]
 
 { #category : #initialization }
