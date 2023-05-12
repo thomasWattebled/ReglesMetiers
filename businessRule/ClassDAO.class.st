@@ -1,6 +1,6 @@
 Class {
 	#name : #ClassDAO,
-	#superclass : #Object,
+	#superclass : #Analyser,
 	#category : #businessRule
 }
 
@@ -57,13 +57,13 @@ ClassDAO >> deleteDAOInName: aDAOList [
 { #category : #'as yet unclassified' }
 ClassDAO >> findAllService: aListOfClass [
 
-	| result |
+	"| result |
 	result := OrderedCollection new.
 	aListOfClass collect: [ :c | 
 		| intermediaire |
 		intermediaire := self findService: c.
 		result addAll: intermediaire ].
-	^ result
+	^ result"
 ]
 
 { #category : #'as yet unclassified' }
@@ -87,11 +87,11 @@ ClassDAO >> findDao: aClassList [
 { #category : #'as yet unclassified' }
 ClassDAO >> findService: aClass [
 
-	| interface |
+"	| interface |
 	interface := aClass interfaceImplementations collect: #interface.
 	^ (interface flatCollect: [ :i | 
 		   i typedEntities flatCollect: [ :c | c atScope: FamixJavaClass ] ])
-		  asSet
+		  asSet"
 ]
 
 { #category : #'as yet unclassified' }

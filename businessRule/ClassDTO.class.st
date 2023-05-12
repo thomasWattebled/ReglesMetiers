@@ -1,6 +1,6 @@
 Class {
 	#name : #ClassDTO,
-	#superclass : #Object,
+	#superclass : #Analyser,
 	#category : #businessRule
 }
 
