@@ -24,9 +24,24 @@ Analyser >> getAllName: aClassList [
 
 { #category : #'as yet unclassified' }
 Analyser >> getAllReceiver: aListOfInvocations [
-
+"analyseur getMethod: methodWithInvocation  using: alldto  "
 	^ (aListOfInvocations flatCollect: [ :m | 
 		   m outgoingInvocations collect: #receiver ]) asSet asArray
+]
+
+{ #category : #'as yet unclassified' }
+Analyser >> getClass: aListOfClas using: aListOfClass [
+
+	"analyseur getClass: listService using: alldto"
+
+	| dict |
+	dict := Dictionary new.
+	aListOfClas do: [ :c | 
+		| intermediaire resultat |
+		intermediaire := self getMethodsWithInvocation: c.
+		resultat := self getMethod: intermediaire using: aListOfClass.
+		resultat notEmpty ifTrue: [ dict at: c put: resultat ] ].
+	^ dict
 ]
 
 { #category : #'as yet unclassified' }
@@ -59,6 +74,18 @@ Analyser >> getInterfaceOfList: aListOfClass [
 	^ aListOfClass flatCollect: [ :c |
 		  self getInterface: c]
 
+]
+
+{ #category : #'as yet unclassified' }
+Analyser >> getMethod: aListOfMethod using: aListOfClass [
+"analyseur getMethod: methodWithInvocation  using: alldto  "
+	^ aListOfMethod select: [ :m | 
+		  | i1 |
+		  i1 := m invokedMethods select: [ :c | 
+			        | intermediaire |
+			        intermediaire := c parentType.
+			        aListOfClass includes: intermediaire ].
+		  i1 notEmpty ]
 ]
 
 { #category : #'as yet unclassified' }
